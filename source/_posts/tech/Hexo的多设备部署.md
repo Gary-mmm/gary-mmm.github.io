@@ -1,6 +1,7 @@
 ---
 title: Hexo的多设备部署
-tags: Hexo git
+tags:
+  - tech
 date: 2025-07-27 10:13:38
 ---
 
