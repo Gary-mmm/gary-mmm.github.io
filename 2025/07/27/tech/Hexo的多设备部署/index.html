@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo的多设备部署 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="又是麻烦的环境配置过程，记录一下以供参考。因为是配置完环境后写的而不是一步一步写的，所以细节上可能会出现部分问题。 在老电脑A上多设备同步本质上还是使用了git来管理。在老电脑A上安装完环境之后，hexo d把静态文件推送到master分支。这里的文件包括：  source（md文件等） archieves css fancybox js index.html  然后在github上另外设置一个h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo的多设备部署">
+<meta property="og:url" content="http://example.com/2025/07/27/tech/Hexo%E7%9A%84%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%83%A8%E7%BD%B2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="又是麻烦的环境配置过程，记录一下以供参考。因为是配置完环境后写的而不是一步一步写的，所以细节上可能会出现部分问题。 在老电脑A上多设备同步本质上还是使用了git来管理。在老电脑A上安装完环境之后，hexo d把静态文件推送到master分支。这里的文件包括：  source（md文件等） archieves css fancybox js index.html  然后在github上另外设置一个h">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-07-27T02:13:38.000Z">
+<meta property="article:modified_time" content="2025-08-21T07:41:50.893Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="tech">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-tech/Hexo的多设备部署" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/07/27/tech/Hexo%E7%9A%84%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%83%A8%E7%BD%B2/" class="article-date">
+  <time class="dt-published" datetime="2025-07-27T02:13:38.000Z" itemprop="datePublished">2025-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hexo的多设备部署
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>又是麻烦的环境配置过程，记录一下以供参考。因为是配置完环境后写的而不是一步一步写的，所以细节上可能会出现部分问题。</p>
+<h2 id="在老电脑A上"><a href="#在老电脑A上" class="headerlink" title="在老电脑A上"></a>在老电脑A上</h2><p>多设备同步本质上还是使用了git来管理。在老电脑A上安装完环境之后，<code>hexo d</code>把静态文件推送到<code>master</code>分支。这里的文件包括：</p>
+<ul>
+<li>source（md文件等）</li>
+<li>archieves</li>
+<li>css</li>
+<li>fancybox</li>
+<li>js</li>
+<li>index.html</li>
+</ul>
+<p>然后在<code>github</code>上另外设置一个<code>hexo</code>分支并设为主分支。并且使用<code>git push</code>将源文件以及配置文件一并上传至该分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo origin/hexo     # 如果还没本地分支</span><br><span class="line"># 或者</span><br><span class="line">git checkout hexo                    # 如果已经有了</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;更新配置文件&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure>
+<p>这时候可以上github确认一下是否成功。</p>
+<h2 id="在新电脑B上"><a href="#在新电脑B上" class="headerlink" title="在新电脑B上"></a>在新电脑B上</h2><p>我希望把A的配置文件移到B上，只要使用git就可以完成，复制粘贴费力而且容易遗漏。在git pull完之后使用<code>npm install hexo</code>,<code>npm install</code>,<code>npm install hexo-deployer-git</code>命令代替<code>hexo init</code>.</p>
+<p>上面步骤中，npm install其实就是读取了packages.json里面的信息，自动安装依赖，有的小伙伴可能只执行npm install就行了，不过按照上面的三步是最稳妥的。如果安装完之后可以正常使用hexo命令就成功了。</p>
+<p>下面给一些命令参考</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git stash #可以保存未提交的修改（如果有）</span><br><span class="line">git stash pop #取出暂存的修改,可能需要解决冲突</span><br><span class="line">git checkout -b hexo #新建分支hexo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>其中遇到换行符转换的问题，根据gpt的建议使用<br><code>git config --global core.autocrlf input</code></p>
+<blockquote>
+<p>你的 Git 设置为在 Windows 上将换行符自动转换为 CRLF（\r\n），&gt; 而这些文件当前使用的是 Unix 风格的 LF（\n）换行。</p>
+</blockquote>
+<blockquote>
+<p>Git 提示你: “等你下次修改或 checkout 的时候，Git 会自动把这些文件的换行从 LF 转成 CRLF。”</p>
+</blockquote>
+<blockquote>
+<p>这是因为 Git 的 core.autocrlf 选项通常在 Windows 默认是 true，所以 Git 会：提交时转成 LF（Unix 标准）,检出到工作目录时转回 CRLF.</p>
+</blockquote>
+<h2 id="最后的结果"><a href="#最后的结果" class="headerlink" title="最后的结果"></a>最后的结果</h2><p>hexo分支上储存的文件：</p>
+<ul>
+<li>.github</li>
+<li>scaffolds</li>
+<li>source</li>
+<li>themes</li>
+<li>.gitignore</li>
+<li>_config.landscape.yml</li>
+<li>_config.yml</li>
+<li>package-lock.json</li>
+<li>package.json</li>
+</ul>
+<p>每次更新完源文件后<code>push</code>一下，保持hexo同步，不影响master分支。</p>
+<p>最后<code>hexo d</code>保持master分支上的同步即可。</p>
+<p>参考文献：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/K1052176873/article/details/122879462">Hexo在多台电脑上提交和更新</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/07/27/tech/Hexo%E7%9A%84%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%83%A8%E7%BD%B2/" data-id="cmeuurg2400060d8jcvn9ctc8" data-title="Hexo的多设备部署" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tech/" rel="tag">tech</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/08/02/tech/%E5%9F%BA%E4%BA%8EVMware%20Workstation%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          基于VMware Workstation的虚拟机配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/07/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/" rel="tag">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tech/" rel="tag">tech</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/tech/" style="font-size: 20px;">tech</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/08/">August 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/07/">July 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/08/28/reading/digital_Signature/">数字签名密史：从急需到有趣</a>
+          </li>
+        
+          <li>
+            <a href="/2025/08/21/tech/cpp/">从c到c++</a>
+          </li>
+        
+          <li>
+            <a href="/2025/08/02/tech/%E5%9F%BA%E4%BA%8EVMware%20Workstation%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE/">基于VMware Workstation的虚拟机配置</a>
+          </li>
+        
+          <li>
+            <a href="/2025/07/27/tech/Hexo%E7%9A%84%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%83%A8%E7%BD%B2/">Hexo的多设备部署</a>
+          </li>
+        
+          <li>
+            <a href="/2025/07/11/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
